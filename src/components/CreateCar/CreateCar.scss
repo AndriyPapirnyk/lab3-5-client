@@ -1,0 +1,66 @@
+.createCar{
+    width: 100%;
+    height: calc(100vh);
+    &__main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+    &__title{
+        font-size: 32px;
+        margin-top: 40px;
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &-group{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            input{
+                width: 300px;
+                height: 50px;
+                border-radius: 10px;
+                padding: 0 10px;
+                font-size: 16px;
+                background-color: rgb(14, 14, 28);
+            }
+            textarea{
+                width: 300px;
+                height: 100px;
+                border-radius: 10px;
+                padding: 10px;
+                font-size: 16px;
+                resize: vertical;
+                background-color: rgb(14, 14, 28);
+                border: none;
+                color: #fff;
+            }
+            textarea:focus {
+                outline: none;
+            }
+            select{
+                width: 300px;
+                height: 50px;
+                border-radius: 10px;
+                font-size: 16px;
+                padding: 0 5px;
+                border: none;
+                background-color: rgb(14, 14, 28);
+                color: #fff;
+            }
+            select:focus {
+                outline: none;
+            }
+        }
+        button{
+            width: 300px;
+            height: 50px;
+            background-color: rgb(14, 14, 28);
+            border-radius: 10px;
+        }
+    }
+}

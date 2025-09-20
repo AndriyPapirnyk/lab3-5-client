@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900');
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat';
+    
+}
+body {
+    background-color: rgb(25, 24, 46);
+    color: #CCCCCC;
 }
 a {
     text-decoration: none;
@@ -10,10 +17,20 @@ button {
     border: none;
     background: none;
     cursor: pointer;
+    color: #fff;
 }
   
 ul, ol {
     list-style: none;
+}
+
+input {
+    border: none;
+    color: #fff;
+}
+
+input:focus {
+    outline: none;
 }
   
   
