@@ -9,7 +9,7 @@ export default function EditCar() {
             <h1 className='createCar__title'>Edit car</h1>
             <form className='createCar__form' action="PUT">
                 <div className="createCar__form-group">
-                    <label htmlFor="title">Title:</label>
+                    <label htmlFor="title">Name:</label>
                     <input type="text" id="title" name="title" required placeholder='Text...'/>
                 </div>
                 <div className="createCar__form-group">
@@ -36,6 +36,10 @@ export default function EditCar() {
                         <option value="sports">Sports Car</option>
                         <option value="luxury">Luxury Car</option>
                     </select>
+                </div>
+                <div className="createCar__form-group">
+                    <label htmlFor="imageUrl">Image url:</label>
+                    <input type="text" id="imageUrl" name="imageUrl" required placeholder='Url...'/>
                 </div>
                 <button type='submit'>Edit</button>
             </form>

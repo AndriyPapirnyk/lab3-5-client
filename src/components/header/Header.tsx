@@ -10,6 +10,13 @@ export default function Header() {
         navigate(path);
     }
 
+    const clearInput = () : void => {
+        const input = document.querySelector('.header__search-input') as HTMLInputElement;
+        if (input) {
+            input.value = '';
+        }
+    }
+
 
   return (
     <header className='header'>
@@ -25,7 +32,7 @@ export default function Header() {
             <button className='header__search-button'>
                 <img src={loupeImg} alt="" />
             </button>
-            <button className='header__search-button'>
+            <button className='header__search-button' onClick={clearInput}>
                 <img src={clearImg} alt="" />
             </button>
         </div>
