@@ -1,33 +1,23 @@
 import { useNavigate } from 'react-router-dom';
 import './Card.scss';
-// import axios from 'axios';
 
 interface CardProps {
+  _id: string;
   title: string;
   type: string;
   description: string;
   price: number;
   imageUrl: string;
   updatedAt: string;
+  onDelete: (_id: string) => void;
 }
 
-export default function Card({ title, type, description, price, imageUrl, updatedAt }: CardProps) {
+export default function Card({ title, type, description, price, imageUrl, updatedAt, onDelete, _id }: CardProps) {
   const navigate = useNavigate();
 
   const navigateTo = (path: string): void => {
     navigate(path);
   };
-
-//   const handleDelete = async () => {
-//     try {
-//       const res = await axios.delete('http://localhost:8000/api/create-car', );
-//       console.log('Car deleted:', res.data);
-//       alert('Car deleted successfully!');
-//     } catch (err: any) {
-//       console.error(err);
-//       alert('Error deleting car: ' + err.message);
-//     }
-//   };
 
   return (
     <div className='card'>
@@ -47,8 +37,8 @@ export default function Card({ title, type, description, price, imageUrl, update
           Last Updated {new Date(updatedAt).toLocaleString()}
         </p>
         <div className="card__options">
-          <button onClick={() => navigateTo('/edit-car')}>Edit</button>
-          <button>Remove</button>
+          <button onClick={() => navigateTo(`/edit-car/${_id}`)}>Edit</button>
+          <button onClick={() => onDelete(_id)}>Remove</button>
         </div>
       </div>
     </div>
