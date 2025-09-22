@@ -6,6 +6,7 @@ import type { Car } from '../types/Car';
 
 export default function CreateCar() {
   const [form, setForm] = useState<Car>({
+    _id: '', 
     title: '',
     description: '',
     price: 0,
@@ -29,6 +30,7 @@ export default function CreateCar() {
       console.log('Car added:', res.data);
       alert('Car added successfully!');
       setForm({
+        _id: '', 
         title: '',
         description: '',
         price: 0,

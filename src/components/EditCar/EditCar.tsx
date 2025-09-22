@@ -2,7 +2,6 @@ import { useEffect, useState, type ChangeEvent, type FormEvent } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Header from '../header/Header';
-import './EditCar.scss';
 import type { Car } from '../types/Car';
 
 export default function EditCar() {
