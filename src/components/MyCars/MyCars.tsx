@@ -33,8 +33,15 @@ export default function MyCars() {
         );
     };
 
-    const handleDelete = (id: string) => {
-        setCars(prev => prev.filter(car => car._id !== id));
+    const handleDelete = async (id: string) => {
+        try {
+            await axios.delete(`http://localhost:8000/api/cars/${id}`);
+            setCars(prev => prev.filter(car => car._id !== id));
+            alert('Car deleted successfully!');
+        } catch (error) {
+            console.error(error);
+            alert('Failed to delete car');
+        }
     };
 
     return (

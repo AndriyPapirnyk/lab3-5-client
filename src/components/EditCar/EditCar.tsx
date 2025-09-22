@@ -47,7 +47,7 @@ export default function EditCar() {
         try {
             await axios.put(`http://localhost:8000/api/cars/${id}`, form);
             alert('Car updated successfully!');
-            navigate('/'); 
+            navigate('/my-cars'); 
         } catch (err) {
             console.error('Error updating car:', err);
             alert('Error updating car');
